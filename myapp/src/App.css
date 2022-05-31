@@ -1,0 +1,699 @@
+@font-face {
+  font-family: 'helvetica';
+  src: url('./Static/Fonts/Helvetica-Neue-Font/HelveticaNeue\ W0166MediumIt/HelveticaNeueW0166MediumIt.otf');
+}
+
+
+*{
+  background: black;
+  color: #F5F8FA;
+  font-weight: bold !important;
+}
+
+html,
+body {
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100vw !important;
+  background-color: black !important;
+}
+
+
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+#main-container{
+  max-width: 1400px;
+}
+
+#first-row{
+  min-height: 900px !important;
+}
+
+#register-container{
+  overflow-x: hidden;
+  height: 100vh !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+#register-container > #first-row{
+  height: 100%;
+}
+
+#register-container > #first-row > .col-md-7{
+  height: 95%;
+}
+
+#first-row-right-col{
+  height: 100% !important;
+}
+
+
+#register-bg-img{
+  height: 100%;
+  width: 100%;
+  min-height: 590px;
+}
+
+@media screen and (max-height: 720px){
+  #register-container > #first-row > .col-md-7{
+    height: 100% !important;
+  }
+}
+
+
+.right-col{
+  height: fit-content !important;
+}
+
+
+#login-icon{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+
+#register-header{
+  color: rgba(245, 248, 250, 0.95);
+  font-size: 4rem;
+}
+
+.register-page-button{
+  width:300px !important;
+  height: 40px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: .9rem !important;
+}
+
+.register-page-button-google{
+  color: rgba(60, 64, 67, 0.8) !important;
+
+}
+
+#google-icon{
+  width: 20px !important;
+  height: 20px !important;
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+
+#apple-icon-span{
+  background: transparent;
+}
+#apple-icon{
+  background-color: transparent;
+  color: black !important;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.hr-with-text{
+  display: f;
+}
+
+/* Via MatTheCat StackOverflow */
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 300px !important;
+  color:rgba(245, 248, 250, 0.8);
+  font-size: .9rem;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(245, 248, 250, 0.8);
+}
+
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+/* end of MatTheCat code */
+
+.register-page-button-email{
+  background-color: rgb(29, 155, 240) !important;
+  color: rgb(245, 248, 250) !important;
+}
+
+#signup-modal{
+  background-color: rgba(60, 64, 67, .1) !important;
+  padding-top: 0 !important;
+}
+
+.modal-content{
+  background-color: black !important;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  height: fit-content !important;
+}
+
+.modal-footer, .modal-header{
+  border: none !important;
+}
+
+.modal-header > button{
+  border: none;
+  font-size: 2.5rem;
+}
+
+.modal-header > #login-icon{
+  width: 50px;
+  height: 75px;
+  position: relative;
+  right: 30px;
+}
+
+.modal-title{
+  margin-top: 0;
+}
+
+.signup-input{
+  background-color: transparent !important;
+  border: 1px solid rgba(60, 64, 67, .9) !important;
+  padding: 15px !important;
+  color: rgb(245, 248, 250) !important;
+}
+
+.signup-input:focus, .register-page-button-signin:focus{
+  border: 1px solid rgb(29, 155, 240) !important;
+}
+
+#signup-submit-button{
+  height: 60px !important;
+  font-size: large !important;
+  font-weight: bold;
+  background-color: rgb(29, 155, 240) !important;
+  border: none;
+  color: rgb(245, 248, 250);
+}
+
+#sign-up-agreement{
+  width: 300px;
+  font-size: .6rem;
+  color: rgba(60, 64, 67, .95) !important;
+}
+
+#sign-up-agreement > a{
+  color:rgb(29, 155, 240);
+  text-decoration: none;
+}
+
+/* Change placeholder text */
+input::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #999;
+}
+input:focus::-webkit-input-placeholder {
+  color: rgb(29, 155, 240);
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: #999;
+}
+input:focus:-moz-placeholder {
+  color: rgb(29, 155, 240);
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+  color: #999;
+}
+input:focus::-moz-placeholder {
+  color: rgb(29, 155, 240);
+}
+
+/* Internet Explorer 10 */
+#input:-ms-input-placeholder {
+  color: #999;
+}
+input:focus:-ms-input-placeholder {
+  color: rgb(29, 155, 240);
+}
+/* ---- -- --  -- -- --  --  */
+
+.register-page-button-signin{
+  border: 1px solid rgba(245, 248, 250, 0.75) !important;
+  color: rgb(29, 155, 240) !important; 
+}
+
+#second-row{
+  height: fit-content !important;
+}
+
+#info-list{
+  height:fit-content;
+}
+
+#info-list, #info-list > a{
+  color: rgb(60, 64, 67) !important;
+  text-decoration: none;
+}
+
+#signin-button-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* Dashboard */
+#dashboard-col-left{
+  text-align: left;
+}
+
+
+#dashboard-icon{
+  width: 75px;
+}
+
+#tweet-submit, #open-tweet-form{
+  font-weight: bold;
+  background-color: rgb(29, 155, 240) !important;
+}
+
+#open-tweet-form{
+  width: 250px;
+  font-weight: bold;
+}
+
+/* TweetForm */
+
+#tweet-form{
+  border-bottom: 1px solid white;
+}
+
+.profile-img-container{
+  border-radius: 50%;
+}
+
+.profile-img{
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  object-position: center;
+}
+
+.profile-img:hover{
+  cursor:pointer;
+  opacity: 90%;
+}
+
+
+.profile-img-edit{
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50%;
+  object-position: center;
+}
+
+#tweet-form-input{
+  border: none !important;
+  font-size: 1.5rem;
+  max-height: 400px;
+  resize: none; 
+  overflow-wrap: break-word;
+  outline: none !important;
+}
+
+#tweet-submit{
+  width: 125px;
+  font-weight: bold;
+}
+
+/* PostDisplay */
+
+#post-list{
+  list-style: none;
+  text-align: start !important;
+  padding: 0;
+}
+
+.links-user-container{
+  width: 100%;
+}
+
+.post{
+  text-align: start !important;
+  border-bottom: 1px solid #999;
+  cursor:pointer;
+}
+
+.post-container > h3{
+  margin-bottom: 0 !important;
+}
+
+#home-right-search{
+  font-weight: bold;
+}
+
+#home-right-search:focus{
+  border: 1px solid rgb(29, 155, 240) !important;
+  box-shadow: none;
+  color: rgb(245, 248, 250);
+}
+
+#whats-happening-container, #who-to-follow-container{
+  border-radius: 25px !important;
+}
+
+
+#whats-happening-item > ul{
+  background-color: transparent !important;
+}
+
+.post-img{
+  width: 504px;
+  border-radius: 25px; 
+  border: 2px solid #999;
+}
+
+#post-img-container{
+  background-color: transparent;
+}
+
+
+#comment-btn-container{
+  position: relative;
+}
+/* Heart icon  */
+.go2484888251, .go4268192979, #comment-btn{
+  float: left;
+  top: -25px !important;
+}
+/*  */
+.follow-btn{
+  width: 200px !important;
+  height: 40px;
+}
+
+.post-acc-link-txt{
+  cursor: pointer;
+}
+
+.link-icon{
+  width: 26px !important;
+  height: 26px !important;
+  object-position: center;
+}
+
+.post-acc-link-txt:hover{
+  color: rgb(29, 155, 240);
+}
+
+.links-link:hover, .post-container:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.post-container > h3, .post-container > h3 > span,
+ .post-container > .container, .post-container > .container > p, .post-container > .container > #post-action-container,
+ #comment-bubble-container, #comment-bubble-container > img
+ {
+  background-color: transparent;
+}
+
+#friend-accept-btn:hover{
+  color: white !important;
+  background-color: #198754;
+}
+
+#friend-decline-btn:hover{
+  color: white !important;
+  background-color: #dc3545;
+}
+
+
+/* Set who to follow and what's happening to 100% width? might need to change column width too. O_O ! */
+@media screen and (max-width: 1195px){
+  .link-btn-text{
+    display: none !important;
+  }
+  
+  .container-fluid{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  nav > .link-container{
+    text-align: center !important;
+  }
+
+  #dashboard-col-left{
+    width: 10% !important;
+  }
+
+  .col-sm-3{
+    width: 25% !important;
+  }
+
+  .post-img{
+    width: 450px;
+  }
+  
+}
+
+
+@media screen and (max-width: 1028px){
+
+  .middle-content{
+    min-width: 400px !important;
+  }
+
+  .post-img{
+    width: 300px !important;
+  }
+
+  #dashboard-icon{
+    display: none;
+  }
+
+  .link-container > .p-2, .link-container > .pe-4{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .link-btn-text{
+    display: none !important;
+  }
+
+  #links-name-display{
+    display: none;
+  }
+
+  #dashboard-col-left{
+    text-align: center !important;
+  }
+
+  .col-sm-6, .col-sm-9{
+    width: 90% !important;
+  }
+  .col-sm-3{
+    width: 10% !important;
+  }
+
+  .hide-small{
+    display: none !important;
+  }
+
+  
+}
+
+@media screen and (max-width: 745px){
+
+  #middle-content{
+    min-width: 0 !important;
+  }
+
+  .profile-img-container-nav{
+    width: 100% !important;
+  }
+
+  #main-container{
+    margin: 0 !important;
+    padding: 0!important;
+    width: 100% !important;
+  }
+
+  .row{
+    padding: 25px 75px;
+    padding-bottom: 75px;
+    padding-top: 75px;
+    width: 100% !important;
+  }
+
+  .col-sm-3{
+    display: none !important;
+  }
+
+  .col-sm-6, .col-sm-9{
+    width: 100% !important;
+    border: none !important;
+  }
+
+  #mobile-bottom-bar{
+    width: 100% !important;
+    height: 75px !important;
+    position: relative;
+    background-color: #0e0e10;
+    position: fixed;
+    padding: 0 !important;
+    margin: 0 !important;
+    bottom: 0;
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .bottom-bar-icon:active{
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px white;
+  }
+
+  #bottom-bar-dropup{
+    /* background-color: #0e0e10; */
+    background-color: green;
+    width: 100vw; 
+    border: none;
+  }
+
+  #bottom-bar-profile-img-btn{
+    background: none;
+	  color: inherit;
+	  border: none;
+	  padding: 0;
+	  font: inherit;
+	  cursor: pointer;
+	  outline: inherit;
+  }
+
+  #mobile-nav{
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .mobile-nav-item{
+    border-top: 1px grey solid;
+    border-bottom: 1px grey solid;
+  }
+
+  .mobile-nav-item:hover{
+    background-color: rgba(0, 0, 0, .75);
+  }
+
+
+  #tweet-submit{
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+
+  #profile-banner{
+    width: 110vw !important;
+  }
+
+  /* Login */
+
+  #login-main{
+    display: none;
+  }
+
+  #login-mobile{
+    display: block !important;
+    width: 100vw;
+    height: 100vh;
+  }
+
+
+
+  /* Register */
+  #register-container{
+    display: none;
+  }
+
+  #register-mobile{
+    display:block !important; 
+  }
+
+
+  #register-bg-img{
+    display: none;
+  }
+
+  /* Edit Account */
+  #edit-account{
+    display: none;
+  }
+
+  #edit-account-mobile{
+    display: block !important;
+  }
+
+
+
+
+}
+
+.navbar-light .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28250, 255, 255, 2550%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e") !important;
+}
+.navbar-light .navbar-toggler {
+  color: rgba(0,0,0,.55);
+  border-color: rgba(255,255,255,1);
+}
+
+#mobile-nav, #register-mobile, #mobile-bottom-bar, #login-mobile, #edit-account-mobile{
+  display: none;
+}
+
+/* @media screen and (max-width: 700px){ 
+
+  #main-container{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  
+
+  .middle-content, .col-sm-9{
+    width: 100% !important;
+  } 
+
+  
+}
+
+
+.middle-content{
+  min-width: 600px;
+}  */
+
+
+/* Generic */
+.bold-font{
+  font-weight: bold;
+}
